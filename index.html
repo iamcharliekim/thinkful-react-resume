@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+  <div id="application-root"></div>
+
+<script
+  src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+<script
+  src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+
+<script type="text/babel">
+function App(props) {
+	return (
+		<div className="sally-student">
+			<header>
+				<img src="http://news.westminster-mo.edu/wp-content/uploads/2019/02/SallyKrebscrop.jpg" alt="Sally Student Portrait"/>
+				<h1> {props.studentName} </h1>
+				<h2> Aspiring fullstack web-developer </h2>
+			</header>
+			<main>
+			  <section>
+				  <header>
+					<h3> Contact Info </h3>
+				  </header>
+
+				<address>
+				  Email: <a href="mailto: sallystudent@thinkful.com" target="_blank">sallystudent@thinkful.com</a>
+				  <br/>
+				  Phone #: 555.555.5555  
+				</address>
+			  </section>
+
+			  <section>
+				<header>
+				  <h3> Education </h3>
+				  </header>
+				<ul>
+				  <li>Wootton High School - 2005 </li>
+				  <li>University of Wisconsin-Madison - BA - Economics 2010 </li>
+				  <li>Thinkful Full Stack Flex - 2019 </li>
+				</ul>
+			  </section>
+
+			  <section>
+				<header>
+				<h3> Employment History </h3>
+				</header>
+
+				<p>
+				  <strong>Barney's Cafe</strong>
+				  <br/>
+				  Barista
+				  <br/>
+				  1/05-1/07
+				  <br/>
+				  Made drinks for customers
+				</p>
+
+				<p>
+				  <strong>Montgomery Mall</strong>
+				  <br/>
+				  Security
+				  <br/>
+				  1/07-1/09
+				  <br/>
+				  Worked as a security gaurd ensuring the safety of all customers at the mall
+				</p>
+
+			  </section>
+			</main>
+    	</div>
+    	)
+}
+
+
+  ReactDOM.render(
+	  <App studentName = 'Sally'><h1>Current Page Title</h1></App>,
+    document.querySelector('#application-root')
+  );
+</script>
+</body>
+</html>
